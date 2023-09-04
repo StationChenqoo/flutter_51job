@@ -5,6 +5,7 @@ import 'package:flutter_51job/widgets/company-panel.dart';
 import 'package:flutter_51job/widgets/conclusion-panel.dart';
 import 'package:flutter_51job/widgets/old-panel.dart';
 import 'package:flutter_51job/widgets/skill-panel.dart';
+import 'package:flutter_51job/widgets/such-as-panel.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -24,20 +25,24 @@ class HomePageState extends State<HomePage> {
         child: Column(
           children: [
             Expanded(
-                child: ListView(
-              children: [
+                child: ListView(children: [
+              ...[
                 BasePanel(),
                 SkillPanel(),
                 CompanyPanel(),
                 OldPanel(),
-                ConclusionPanel()
+                ConclusionPanel(),
+                SuchAsPanel()
               ]
                   .map((e) => Container(
                         margin: EdgeInsets.only(bottom: 12),
                         child: e,
                       ))
                   .toList(),
-            ))
+              SizedBox(
+                height: MediaQuery.of(context).size.height,
+              )
+            ]))
           ],
         ),
       ),
