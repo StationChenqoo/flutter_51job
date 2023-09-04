@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_51job/widgets/base-panel.dart';
+import 'package:flutter_51job/widgets/common-card.dart';
+import 'package:flutter_51job/widgets/company-panel.dart';
+import 'package:flutter_51job/widgets/conclusion-panel.dart';
+import 'package:flutter_51job/widgets/old-panel.dart';
+import 'package:flutter_51job/widgets/skill-panel.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -8,40 +14,33 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(''),
-      ),
-      body: Center(
+      extendBodyBehindAppBar: true,
+      body: Container(
+        padding: EdgeInsets.all(16),
+        decoration: BoxDecoration(color: Colors.grey[100]),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
+          children: [
+            Expanded(
+                child: ListView(
+              children: [
+                BasePanel(),
+                SkillPanel(),
+                CompanyPanel(),
+                OldPanel(),
+                ConclusionPanel()
+              ]
+                  .map((e) => Container(
+                        margin: EdgeInsets.only(bottom: 12),
+                        child: e,
+                      ))
+                  .toList(),
+            ))
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
