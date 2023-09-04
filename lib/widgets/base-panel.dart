@@ -11,12 +11,17 @@ class BasePanel extends StatelessWidget {
       children: [
         Row(
           children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(32),
-              child: Image.asset(
-                'assets/i.jpg',
-                height: 78,
-                width: 78,
+            PhysicalModel(
+              color: Colors.white,
+              elevation: 4,
+              borderRadius: BorderRadius.circular(39),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(39),
+                child: Image.asset(
+                  'assets/i.jpg',
+                  height: 78,
+                  width: 78,
+                ),
               ),
             ),
             SizedBox(
@@ -73,12 +78,12 @@ class BasePanel extends StatelessWidget {
                             style: TextStyle(color: Colors.grey, fontSize: 14),
                           ),
                           SizedBox(
-                            width: 4,
+                            width: 3,
                           ),
                           Icon(
                             e.icon,
                             color: Theme.of(context).primaryColor,
-                            size: 16,
+                            size: 14,
                           )
                         ],
                       ),

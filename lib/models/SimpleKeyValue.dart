@@ -61,8 +61,16 @@ class SimpleKeyValue {
         SimpleKeyValue(
             icon: 'assets/skills-redux.png', name: 'Redux', value: ''),
         SimpleKeyValue(
-            icon: 'assets/skills-android.png', name: 'Android', value: ''),
-        SimpleKeyValue(icon: 'assets/skills-iOS.png', name: 'iOS', value: ''),
+            icon: 'assets/skills-android.png',
+            name: 'Java（android）',
+            value: ''),
+        SimpleKeyValue(
+            icon: 'assets/skills-iOS.png', name: 'OC（iOS）', value: ''),
+            SimpleKeyValue(
+            icon: 'assets/skills-markdown.png', name: 'Markdown', value: ''),
+            SimpleKeyValue(
+            icon: 'assets/skills-jenkins.png', name: 'Jenkins', value: ''),
+
       ],
       [
         SimpleKeyValue(

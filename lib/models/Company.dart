@@ -32,6 +32,8 @@ class Company {
             value: ''),
       ], honor: [
         SimpleKeyValue(
+            icon: '', name: ' · 🍵 2023年 Google I/O 开发者大会.', value: ''),
+        SimpleKeyValue(
             icon: '', name: ' · 🥇 公司核心项目的代码贡献率最高的 Contributor.', value: ''),
         SimpleKeyValue(icon: '', name: ' · 🐞 原生问题疑难杂症的 Solver.', value: ''),
       ], detail: [
@@ -98,7 +100,7 @@ class Company {
         SimpleKeyValue(
             icon: '',
             name: '💄 公共组件封装',
-            value: ['虚拟键盘。', '通用对话框。', '通用弹窗 ...']),
+            value: ['虚拟键盘、通用对话框、通用弹窗 ...']),
         SimpleKeyValue(
             icon: '',
             name: '🚧 项目代码相关',

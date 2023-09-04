@@ -1,7 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_51job/home.dart';
+import 'package:window_manager/window_manager.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // Must add this line.
+  await windowManager.ensureInitialized();
+
+  WindowOptions windowOptions = WindowOptions(
+    size: Size(640, 640 * 1.5),
+    center: true,
+    // backgroundColor: Colors.transparent,
+    skipTaskbar: false,
+  );
+  windowManager.waitUntilReadyToShow(windowOptions, () async {
+    await windowManager.show();
+    await windowManager.focus();
+  });
   runApp(const App());
 }
 
