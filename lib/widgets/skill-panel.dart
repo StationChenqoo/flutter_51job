@@ -12,7 +12,7 @@ class SkillPanel extends StatelessWidget {
           Image.asset(
             icon,
             height: 24,
-            width: 24,
+            width: 28,
           ),
           SizedBox(
             width: 5,
@@ -71,10 +71,12 @@ class SkillPanel extends StatelessWidget {
     return CommonCard(
         child: Column(
       children: [
+        // https://z.zhipin.com/web/wxapp/resource/zhipin/emoji/gif2/emoji-7.gif
+        // 7 9 38
         ...[
-          buildGrouper(context, 0, 'assets/face-1.png', '熟练', []),
-          buildGrouper(context, 1, 'assets/face-2.png', '一般', []),
-          buildGrouper(context, 2, 'assets/face-3.png', '了解', []),
+          buildGrouper(context, 0, 'assets/boss-1.gif', '熟练', []),
+          buildGrouper(context, 1, 'assets/boss-2.gif', '一般', []),
+          buildGrouper(context, 2, 'assets/boss-3.gif', '了解', []),
         ]
             .asMap()
             .entries

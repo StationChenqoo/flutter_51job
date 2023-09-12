@@ -33,7 +33,7 @@ class MyBoxBorder extends StatelessWidget {
           ),
         ),
         Positioned(
-            left: 32,
+            left: 16,
             top: -8,
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 5),

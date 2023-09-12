@@ -9,13 +9,31 @@ class SimpleKeyValue {
 
   static List<SimpleKeyValue> loadConnects() {
     return [
-      SimpleKeyValue(icon: Icons.event_outlined, name: '', value: '1995年10月'),
       SimpleKeyValue(
-          icon: Icons.person_pin_outlined, name: '', value: '上海市普陀区'),
+          icon: 'assets/connect-birth.png', name: '', value: '1995年10月'),
       SimpleKeyValue(
-          icon: Icons.phone_iphone_outlined, name: '', value: '15552198996'),
+          icon: 'assets/connect-mobile.png', name: '', value: '15552198996'),
       SimpleKeyValue(
-          icon: Icons.email_outlined, name: '', value: '429884848@qq.com'),
+          icon: 'assets/connect-git.png', name: '', value: '/ChenqiaoStation'),
+      SimpleKeyValue(
+          icon: 'assets/connect-email.png',
+          name: '',
+          value: '429884848@qq.com'),
+    ];
+  }
+
+  static List<SimpleKeyValue> loadSuchAses() {
+    return [
+      SimpleKeyValue(
+          icon:
+              'https://cdn.cctv3.net/net.cctv3.51Job/Snipaste_2023-09-12_07-04-53.jpg',
+          name: '公司核心项目代码贡献量',
+          value: ''),
+      SimpleKeyValue(
+          icon:
+              'https://cdn.cctv3.net/net.cctv3.51Job/Snipaste_2023-09-12_07-30-50.jpg',
+          name: '社区贡献',
+          value: '')
     ];
   }
 
@@ -65,12 +83,9 @@ class SimpleKeyValue {
             name: 'Java（android）',
             value: ''),
         SimpleKeyValue(
-            icon: 'assets/skills-iOS.png', name: 'OC（iOS）', value: ''),
-            SimpleKeyValue(
             icon: 'assets/skills-markdown.png', name: 'Markdown', value: ''),
-            SimpleKeyValue(
+        SimpleKeyValue(
             icon: 'assets/skills-jenkins.png', name: 'Jenkins', value: ''),
-
       ],
       [
         SimpleKeyValue(
@@ -91,7 +106,9 @@ class SimpleKeyValue {
         SimpleKeyValue(
             icon: 'assets/skills-webpack.png', name: 'Webpack', value: ''),
         SimpleKeyValue(
-            icon: 'assets/skills-node.png', name: 'Node JS', value: ''),
+            icon: 'assets/skills-node.png',
+            name: 'Express.JS Koa.JS',
+            value: ''),
         SimpleKeyValue(icon: 'assets/skills-sass.png', name: 'Sass', value: ''),
         SimpleKeyValue(icon: 'assets/skills-yarn.png', name: 'Yarn', value: ''),
         SimpleKeyValue(
@@ -99,7 +116,9 @@ class SimpleKeyValue {
         SimpleKeyValue(
             icon: 'assets/skills-nest.png', name: 'NestJs', value: ''),
         SimpleKeyValue(
-            icon: 'assets/skills-nginx.png', name: 'Nginx', value: '')
+            icon: 'assets/skills-nginx.png', name: 'Nginx', value: ''),
+        SimpleKeyValue(
+            icon: 'assets/skills-iOS.png', name: 'OC（iOS）', value: ''),
       ]
     ][index];
   }

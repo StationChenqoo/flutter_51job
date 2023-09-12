@@ -32,10 +32,11 @@ class Company {
             value: ''),
       ], honor: [
         SimpleKeyValue(
-            icon: '', name: ' · 🍵 2023年 Google I/O 开发者大会.', value: ''),
+            icon: '', name: '🍵 2023年 Google I/O Connect 开发者大会.', value: ''),
         SimpleKeyValue(
-            icon: '', name: ' · 🥇 公司核心项目的代码贡献率最高的 Contributor.', value: ''),
-        SimpleKeyValue(icon: '', name: ' · 🐞 原生问题疑难杂症的 Solver.', value: ''),
+            icon: '', name: '🥇 公司核心项目的代码贡献率最高的 Contributor.', value: ''),
+        SimpleKeyValue(icon: '', name: '🐞 原生问题疑难杂症的 Solver.', value: ''),
+        SimpleKeyValue(icon: '', name: '🚀 不断优化开发流程，提升开发效率，优化用户体验.', value: ''),
       ], detail: [
         SimpleKeyValue(icon: '', name: '🆕 编写原生模块', value: [
           'RN调用NativeModules，处理消息通知、各种原生层面权限的授权（各个android版本对于FileProvider、Uri、Http的处理）。',
@@ -66,7 +67,7 @@ class Company {
             name: 'Renpho health（Google Play）',
             value: ''),
       ], honor: [
-        SimpleKeyValue(icon: '', name: '🎨 RN Team 从 0 到 1。', value: '')
+        SimpleKeyValue(icon: '', name: '🕵️‍♂️ RN Team 从 0 到 1。', value: ''),
       ], detail: [
         SimpleKeyValue(
             icon: '',
@@ -76,7 +77,7 @@ class Company {
             icon: '', name: '💄 公共组件封装', value: ['跟上个公司做的内容差不多 ...']),
         SimpleKeyValue(icon: '', name: '🚧 项目代码相关', value: [
           'class → Hooks，aHooks处理复杂页面以及业务逻辑的处理。',
-          'redux → zustand',
+          'redux → zustand。',
           'js → ts ...'
         ]),
         SimpleKeyValue(
@@ -90,17 +91,24 @@ class Company {
             name: 'mPOS（iOS: AppStore）',
             value: ''),
       ], honor: [
-        SimpleKeyValue(icon: '', name: ' · 🐞 原生问题疑难杂症的 Solver.', value: ''),
+        SimpleKeyValue(icon: '', name: '🐞 原生问题疑难杂症的 Solver.', value: ''),
+        SimpleKeyValue(
+            icon: '',
+            name: '🚧 重构项目的数据流管理（MobX + AsyncStorage → Redux）.',
+            value: ''),
+        SimpleKeyValue(
+            icon: '', name: '👨‍💻‍ RN整个项目的升级以及三方库的升级和兼容.', value: ''),
       ], detail: [
         SimpleKeyValue(icon: '', name: '🆕 编写原生模块', value: [
           'RN调用NativeModules，进行TTS普通话、粤语和英语的语音播报（讯飞语音SDK）。',
-          '调用硬件SDK进行热敏打印机的打印（x86 Pos机编程）。',
+          'RN调用NativeModules，进行.zip的解压，.csv的处理。'
+              'RN调用NativeModules，调用硬件SDK进行热敏打印机的打印（x86 Pos机编程）。',
           '八达通支付 ...'
         ]),
-        SimpleKeyValue(
-            icon: '',
-            name: '💄 公共组件封装',
-            value: ['虚拟键盘、通用对话框、通用弹窗 ...']),
+        SimpleKeyValue(icon: '', name: '💄 公共组件封装', value: [
+          '屏幕适配方案，不同设计稿尺寸的适配，不同屏幕以及iPad和iPhone等适配。',
+          '虚拟键盘、通用对话框、通用弹窗 ...'
+        ]),
         SimpleKeyValue(
             icon: '',
             name: '🚧 项目代码相关',
@@ -108,7 +116,8 @@ class Company {
         SimpleKeyValue(icon: '', name: '🚀 项目重大提升', value: [
           'react-native的升级。',
           '调试模式的升级，可以直接console调试网络请求（RN 0.62之前是没有Flipper的）。',
-          '路由react-navigation的升级 （现在都6.x了，他还用2.x）...'
+          '路由react-navigation的升级。'
+              'Android X的升级 ...'
         ]),
       ]),
     ];

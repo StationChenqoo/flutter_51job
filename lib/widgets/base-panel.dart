@@ -14,11 +14,12 @@ class BasePanel extends StatelessWidget {
             PhysicalModel(
               color: Colors.white,
               elevation: 4,
-              borderRadius: BorderRadius.circular(39),
+              borderRadius: BorderRadius.circular(16),
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(39),
-                child: Image.asset(
-                  'assets/i.jpg',
+                borderRadius: BorderRadius.circular(16),
+                // 'https://cdn.cctv3.net/net.cctv3.51Job/i-Google.jpg',
+                child: Image.network(
+                  'https://cdn.cctv3.net/net.cctv3.51Job/i-Google.jpg',
                   height: 78,
                   width: 78,
                 ),
@@ -58,7 +59,7 @@ class BasePanel extends StatelessWidget {
                     ],
                   ),
                   Text(
-                    '低级资浅开发工程师（全栈 & 偏前端）',
+                    '!(资浅低级)软件开发工程师（全栈 & 偏前端）',
                     style: TextStyle(
                       color: Colors.black87,
                       fontSize: 16,
@@ -80,11 +81,10 @@ class BasePanel extends StatelessWidget {
                           SizedBox(
                             width: 3,
                           ),
-                          Icon(
-                            e.icon,
-                            color: Theme.of(context).primaryColor,
-                            size: 14,
-                          )
+                          Image.asset(e.icon,
+                              height: 16,
+                              width: 16,
+                              color: Theme.of(context).primaryColor)
                         ],
                       ),
                     ))
@@ -99,11 +99,11 @@ class BasePanel extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             ...SimpleKeyValue.loadBaseSkills().map((e) => Container(
-                  padding: EdgeInsets.symmetric(vertical: 1, horizontal: 6),
+                  padding: EdgeInsets.symmetric(vertical: 2, horizontal: 6),
                   // margin: EdgeInsets.only(right: 10),
                   decoration: BoxDecoration(
                       color: Theme.of(context).primaryColor.withOpacity(0.18),
-                      borderRadius: BorderRadius.circular(12)),
+                      borderRadius: BorderRadius.circular(6)),
                   child: Row(
                     children: [
                       Image.asset(
@@ -119,7 +119,7 @@ class BasePanel extends StatelessWidget {
                         e.name,
                         style: TextStyle(
                             color: Theme.of(context).primaryColor,
-                            fontSize: 14),
+                            fontSize: 12),
                       )
                     ],
                   ),

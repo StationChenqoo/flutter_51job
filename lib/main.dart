@@ -28,7 +28,10 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(useMaterial3: true, fontFamily: 'HarmonyOS-Sans'),
+      theme: ThemeData(
+          useMaterial3: true,
+          fontFamily: 'HarmonyOS-Sans',
+          primaryColor: Colors.deepPurple),
       home: const HomePage(),
     );
   }
