@@ -10,7 +10,7 @@ import 'package:flutter_51job/widgets/common-card.dart';
 //   '💄 Pursuing the ultimate user experience, pixel level reproduction of design drafts, millisecond level animation experience.',
 // ];
 const DATAS = [
-  '🚗 沪A可上高架、过地道，辐射市区半个小时可到公司（加班不需要打车 😂）.',
+  // '🚗 沪A可上高架、过地道，辐射市区半个小时可到公司（加班不需要打车 😂）.',
   '🐛 面向 Google StackOverflow ChatGPT4.0 编程，0 errors.',
   '👀 Forked Twitter、GitHub，始终关注行业最新动向.',
   '🐞 前后端（Node后端 & Java后端）都懂，能协助后端设计数据库，制定接口规范，协助测试快速定位问题.',

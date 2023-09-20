@@ -14,12 +14,12 @@ class BasePanel extends StatelessWidget {
             PhysicalModel(
               color: Colors.white,
               elevation: 4,
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(39),
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(16),
+                borderRadius: BorderRadius.circular(39),
                 // 'https://cdn.cctv3.net/net.cctv3.51Job/i-Google.jpg',
-                child: Image.network(
-                  'https://cdn.cctv3.net/net.cctv3.51Job/i-Google.jpg',
+                child: Image.asset(
+                  'assets/i.jpg',
                   height: 78,
                   width: 78,
                 ),
@@ -59,7 +59,7 @@ class BasePanel extends StatelessWidget {
                     ],
                   ),
                   Text(
-                    '!(资浅低级)软件开发工程师（全栈 & 偏前端）',
+                    '低级资浅软件开发工程师（全栈 & 偏前端）',
                     style: TextStyle(
                       color: Colors.black87,
                       fontSize: 16,
@@ -76,7 +76,9 @@ class BasePanel extends StatelessWidget {
                         children: [
                           Text(
                             e.value,
-                            style: TextStyle(color: Colors.grey, fontSize: 14),
+                            style: TextStyle(
+                                color: Colors.black.withOpacity(0.618),
+                                fontSize: 14),
                           ),
                           SizedBox(
                             width: 3,

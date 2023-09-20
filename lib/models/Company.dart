@@ -78,7 +78,7 @@ class Company {
         SimpleKeyValue(icon: '', name: '🚧 项目代码相关', value: [
           'class → Hooks，aHooks处理复杂页面以及业务逻辑的处理。',
           'redux → zustand。',
-          'js → ts ...'
+          'JavaScript → TypeScript ...'
         ]),
         SimpleKeyValue(
             icon: '',
