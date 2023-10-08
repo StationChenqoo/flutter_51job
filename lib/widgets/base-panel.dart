@@ -3,6 +3,12 @@ import 'package:flutter_51job/models/SimpleKeyValue.dart';
 import 'package:flutter_51job/widgets/common-card.dart';
 
 class BasePanel extends StatelessWidget {
+  final data;
+  BasePanel({required this.data});
+
+  String buildOSS(String icon) =>
+      'https://cdn.cctv3.net/net.cctv3.51Job/${icon}';
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -38,9 +44,10 @@ class BasePanel extends StatelessWidget {
                   Text(
                     '孙宇鹏',
                     style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500),
+                      color: Colors.black,
+                      fontSize: 20,
+                      // fontWeight: FontWeight.w500
+                    ),
                   ),
                   Row(
                     children: [
@@ -59,10 +66,10 @@ class BasePanel extends StatelessWidget {
                     ],
                   ),
                   Text(
-                    '低级资浅软件开发工程师（全栈 & 偏前端）',
+                    data?['intent'] ?? '',
                     style: TextStyle(
                       color: Colors.black87,
-                      fontSize: 16,
+                      fontSize: 14,
                     ),
                   )
                 ],
@@ -100,7 +107,7 @@ class BasePanel extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            ...SimpleKeyValue.loadBaseSkills().map((e) => Container(
+            ...(data['skills'] as List).asMap().entries.map((e) => Container(
                   padding: EdgeInsets.symmetric(vertical: 2, horizontal: 6),
                   // margin: EdgeInsets.only(right: 10),
                   decoration: BoxDecoration(
@@ -108,8 +115,8 @@ class BasePanel extends StatelessWidget {
                       borderRadius: BorderRadius.circular(6)),
                   child: Row(
                     children: [
-                      Image.asset(
-                        e.icon,
+                      Image.network(
+                        buildOSS(e.value['icon']),
                         color: Theme.of(context).primaryColor,
                         height: 16,
                         width: 16,
@@ -118,7 +125,7 @@ class BasePanel extends StatelessWidget {
                         width: 6,
                       ),
                       Text(
-                        e.name,
+                        e.value['text'],
                         style: TextStyle(
                             color: Theme.of(context).primaryColor,
                             fontSize: 12),

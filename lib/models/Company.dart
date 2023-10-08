@@ -17,7 +17,7 @@ class Company {
 
   static List<Company> loadCompanies() {
     return [
-      Company(name: '云南白药集团', range: '2021年7月-2023年9月', link: [
+      Company(name: '云南白药集团--上海健康产品有限公司', range: '2021年7月-2023年9月', link: [
         SimpleKeyValue(
             icon: 'assets/company-mobile.png',
             name: '采之汲（iOS: AppStore & android: Huawei Xiaomi OPPO vivo厂商应用商店）',

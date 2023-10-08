@@ -1,3 +1,6 @@
+import 'dart:math';
+
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_51job/widgets/base-panel.dart';
 import 'package:flutter_51job/widgets/common-card.dart';
@@ -15,6 +18,9 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
+  int intent = 0;
+  dynamic data = {};
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,10 +33,12 @@ class HomePageState extends State<HomePage> {
             Expanded(
                 child: ListView(children: [
               ...[
-                BasePanel(),
-                SkillPanel(),
-                CompanyPanel(),
-                OldPanel(),
+                BasePanel(
+                  data: data,
+                ),
+                SkillPanel(data: data,),
+                CompanyPanel(data: data,),
+                // OldPanel(),
                 ConclusionPanel(),
                 SuchAsPanel()
               ]
@@ -46,6 +54,39 @@ class HomePageState extends State<HomePage> {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        // mini: true,
+        onPressed: resetIntent,
+        tooltip: 'Increment',
+        child: Image.asset(
+          [
+            'assets/float-android.png',
+            'assets/float-ie.png',
+            'assets/float-spring.png'
+          ][intent],
+          color: Colors.white,
+          height: 32,
+          width: 32,
+        ),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
+  }
+
+  void resetIntent() async {
+    int _intent = new Random().nextInt(2);
+    setState(() {
+      intent = _intent;
+    });
+    var dio = new Dio();
+    final response = await dio.get(
+        'http://localhost:3000/demo/select51Job?intent=${[
+      'android',
+      'web',
+      'java'
+    ][_intent]}');
+    setState(() {
+      intent = _intent;
+      data = response.data['data'];
+    });
   }
 }
